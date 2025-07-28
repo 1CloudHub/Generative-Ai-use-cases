@@ -150,6 +150,33 @@ In that case, please be careful about conflicts with GenU's main branch.
 
 ## Deployment
 
+Deploy AWS resources with the following command. Please wait for the deployment to complete (it may take about 20 minutes).
+
+```bash
+# Quick deployment
+
+# Fast deployment (quickly deploy without pre-checking created resources)
+npm run cdk:deploy:quick
+
+# 1. Clone the repository:
+git clone https://github.com/1CloudHub/Generative-Ai-use-cases.git
+cd Generative-Ai-use-cases
+ 
+# 2. Run environment check (optional):
+chmod +x check_env.sh && ./check_env.sh
+ 
+3. Deploy the CDK stack:
+./deploy.sh 
+```
+
+Troubleshoot: Execute below command to troubleshoot if you face any permission errors during deployment
+
+```bash
+# Troubleshoot deployment
+chmod +x deploy.sh
+./deploy.sh
+```
+
 > [!IMPORTANT]
 > Please enable the `modelIds` (text generation), `imageGenerationModelIds` (image generation), and `videoGenerationModelIds` (video generation) in the `modelRegion` region listed in [`/packages/cdk/cdk.json`](/packages/cdk/cdk.json). ([Amazon Bedrock Model access screen](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess))
 
