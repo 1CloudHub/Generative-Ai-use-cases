@@ -155,9 +155,6 @@ Deploy AWS resources with the following command. Please wait for the deployment 
 ```bash
 # Quick deployment
 
-# Fast deployment (quickly deploy without pre-checking created resources)
-npm run cdk:deploy:quick
-
 # 1. Clone the repository:
 git clone https://github.com/1CloudHub/Generative-Ai-use-cases.git
 cd Generative-Ai-use-cases
